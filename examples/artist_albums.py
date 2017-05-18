@@ -5,6 +5,7 @@ import spotipy
 '''
 
 def get_artist(name):
+    sp = spotipy.Spotify()
     results = sp.search(q='artist:' + name, type='artist')
     items = results['artists']['items']
     if len(items) > 0:
